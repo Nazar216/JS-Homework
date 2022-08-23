@@ -690,30 +690,353 @@
 // console.log(hexColors);
 
 
+
+
 // ЗАДАЧА 25
 
-const forecast = {
-    today: {
-        low: 28,
-        high: 32,
-        icon: 'https://www.flaticon.com/svg/static/icons/svg/861/861059.svg',
-    },
-    tomorrow: {
-        low: 27,
-        high: 31,
+// const forecast = {
+//     today: {
+//         low: 28,
+//         high: 32,
+//         icon: 'https://www.flaticon.com/svg/static/icons/svg/861/861059.svg',
+//     },
+//     tomorrow: {
+//         low: 27,
+//         high: 31,
+//     },
+// };
+
+
+// // const highToday = forecast.today.high;
+// // const lowToday = forecast.today.low;
+// // const todayIcon = forecast.today.icon;
+
+// // const highTomorrow = forecast.tomorrow.high;
+// // const lowTomorrow = forecast.tomorrow.low;
+// // const tomorrowIcon = forecast.tomorrow.icon;
+
+// const { today: { low: lowToday, high: highToday, icon: todayIcon = 'https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg' },
+// tomorrow: { low: lowTomorrow, high: highTomorrow, icon: tomorrowIcon = 'https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg' },
+// } = forecast
+
+// console.log(lowToday);
+
+
+// ЗАДАЧА 26
+
+
+// function calculateMeanTemperature(forecast) {
+//     const { today: { low: todayLow, high: todayHigh }, tomorrow: { low: tomorrowLow, high: tomorrowHigh } } = forecast
+//     // const todayLow = forecast.today.low;
+//     // const todayHigh = forecast.today.high;
+//     // const tomorrowLow = forecast.tomorrow.low;
+//     // const tomorrowHigh = forecast.tomorrow.high;
+
+//     return (todayLow + todayHigh + tomorrowLow + tomorrowHigh) / 4;
+// }
+
+
+// console.log(calculateMeanTemperature({ today: {low: 37, high: 40}, tomorrow: {low: 33, high: 38} }))
+
+
+
+// ЗАДАЧА 27
+
+// const scores = [89, 64, 42, 17, 93, 51, 26];
+
+// const bestScore = Math.max(...scores);
+// const worstScore = Math.min(...scores);
+
+// console.log(bestScore)
+
+
+// ЗАДАЧА 28
+
+// const firstGroupScores = [64, 42, 93];
+// const secondGroupScores = [89, 14, 51, 26];
+// const thirdGroupScores = [29, 47, 18, 97, 81];
+
+// const allScores = [...firstGroupScores, ...secondGroupScores, ...thirdGroupScores];
+// const bestScore = Math.max(...allScores);
+// const worstScore = Math.min(...allScores);
+
+// console.log(allScores)
+
+
+// ЗАДАЧА 29
+
+// const defaultSettings = {
+//     theme: 'light',
+//     public: true,
+//     withPassword: false,
+//     minNumberOfQuestions: 10,
+//     timePerQuestion: 60,
+//   };
+//   const overrideSettings = {
+//     public: false,
+//     withPassword: true,
+//     timePerQuestion: 30,
+//   };
+
+// const finalSettings = {...defaultSettings, ...overrideSettings};
+
+// console.log(finalSettings)
+
+
+// ЗАДАЧА 30
+
+// function makeTask(data) {
+//     const completed = false;
+//     const category = 'General';
+//     const priority = 'Normal';
+
+//     const renewData = {
+//         completed: completed,
+//         category: category,
+//         priority: priority,
+//         ...data
+//     }
+//     return renewData
+// }
+// console.log(makeTask({}))
+
+
+
+// ЗАДАЧА 31
+
+
+// function add(...args) {
+
+//     let total = 0
+
+//     for (const arg of args) {
+//         total += arg
+//     }
+
+//     return total
+
+// }
+
+// console.log(add(100, 200))
+
+
+// function add(...args) {
+
+//     let total = 0
+
+//     for (let i = 0; i < args.length; i += 1) {
+//         console.log(...args)
+//         total += args[i];
+//     }
+
+//     return total
+
+// }
+
+// console.log(add(1, 2, 3))
+
+
+
+// ЗАДАЧА 32
+
+// function multiply(firstNumber, secondNumber, ...otherArgs) {
+//     console.log(firstNumber); // Значение первого аргумента
+//     console.log(secondNumber); // Значение второго аргумента
+//     console.log(otherArgs); // Массив остальных аргументов
+// }
+
+// multiply(1, 2);
+// multiply(1, 2, 3);
+// multiply(1, 2, 3, 4);
+
+
+
+// function addOverNum(firstNumber, ...args) {
+
+//     let total = 0;
+
+//     console.log(firstNumber)
+
+//     for (const arg of args) {
+
+//         console.log(args)
+
+//         if (firstNumber < arg){
+//             total += arg;
+//         }
+
+//     }
+
+//     return total
+// }
+
+// console.log(addOverNum(15, 8, 27))
+
+
+
+// ЗАДАЧА 33
+
+// function findMatches(array, ...args) {
+
+//     const matches = [];
+
+//     console.log(...array)
+//     console.log(args)
+
+//     for (const arg of args) {
+//         console.log(arg)
+
+//         if(array.includes(arg)){
+//            matches.push(arg)
+//         }
+//     }
+
+//     return matches;
+// }
+
+// console.log(findMatches([1, 2, 3, 4, 5], 1, 8, 2, 7))
+
+
+// ЗАДАЧА 34
+
+
+// const bookShelf = {
+
+//     books: ['The last kingdom', 'The guardian of dreams'],
+//     getBooks() {
+//       return 'Returning all books';
+//     },
+//     addBook(bookName) {
+//       return `Adding book ${bookName}`;
+//     },
+//     removeBook(bookName){
+//         return `Deleting book ${bookName}`
+//     },
+//     updateBook(oldName, newName){
+//         return `Updating book ${oldName} to ${newName}`
+//     }
+// };
+
+// console.log(bookShelf.getBooks())
+// console.log(bookShelf.addBook("Haze"))
+
+
+// console.log(bookShelf.removeBook("Red sunset"));
+// console.log(bookShelf.updateBook("Sands of dune", "Dune"));
+
+
+// ЗАДАЧА 35
+
+// const bookShelf = {
+//     books: ['The last kingdom', 'Haze', 'The guardian of dreams'],
+
+//     updateBook(oldName, newName) {
+//       const bookIndex = this.books.indexOf(oldName);
+
+//       console.log(bookIndex);
+
+//       this.books.splice(bookIndex, 1, newName);
+
+//     },
+
+// };
+
+
+// console.log(bookShelf.updateBook("Haze", "Dungeon chronicles"))
+
+// console.log(bookShelf.books)
+
+
+// ЗАДАЧА 36
+
+// const atTheOldToad = {
+//     potions: []
+// };
+
+// console.log(atTheOldToad.potions);
+
+
+
+// ЗАДАЧА 37
+
+// const atTheOldToad = {
+
+//     potions: ['Speed potion', 'Dragon breath', 'Stone skin'],
+
+//     getPotions() {
+//         return atTheOldToad.potions;
+//     }
+
+// };
+
+// console.log(atTheOldToad.getPotions());
+
+
+
+// ЗАДАЧА 38
+
+// const atTheOldToad = {
+//     potions: ['Speed potion', 'Dragon breath', 'Stone skin'],
+
+//     addPotion(potionName) {
+//         this.potions.push(potionName)
+
+//     },
+
+// };
+
+
+// console.log(atTheOldToad.potions)
+
+// atTheOldToad.addPotion('Invisibility');
+
+
+// console.log(atTheOldToad.potions)
+
+
+// atTheOldToad.addPotion('Power potion');
+
+
+// console.log(atTheOldToad.potions)
+
+
+
+// ЗАДАЧА 39
+
+
+// const atTheOldToad = {
+//     potions: ["Speed potion", "Dragon breath", "Stone skin"],
+
+//     removePotion(potionName) {
+//         this.potions.splice(this.potions.indexOf(potionName), 1)
+//     },
+
+// };
+
+// atTheOldToad.removePotion("Dragon breath");
+
+// console.log(atTheOldToad.potions);
+
+
+// atTheOldToad.removePotion("Speed potion")
+
+// console.log(atTheOldToad.potions);
+
+
+
+// ЗАДАЧА 40
+
+const atTheOldToad = {
+    potions: ['Speed potion', 'Dragon breath', 'Stone skin'],
+    updatePotionName(oldName, newName) {
+        this.potions.splice(this.potions.indexOf(oldName), 1, newName)
     },
 };
 
+atTheOldToad.updatePotionName("Dragon breath", "Polymorth")
 
-// const highToday = forecast.today.high;
-// const lowToday = forecast.today.low;
-// const todayIcon = forecast.today.icon;
+console.log(atTheOldToad.potions);
 
-// const highTomorrow = forecast.tomorrow.high;
-// const lowTomorrow = forecast.tomorrow.low;
-// const tomorrowIcon = forecast.tomorrow.icon;
+atTheOldToad.updatePotionName("Stone skin", "Invisibility")
 
-const { highToday: today:{ high } } = forecast
-
-
-console.log(highToday);
+console.log(atTheOldToad.potions);
