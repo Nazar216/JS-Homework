@@ -7,6 +7,7 @@
 // };
 
 // book.genres.push('kaki')
+// console.log("kaki", kaki)
 
 // console.log(book.genres);
 
@@ -1026,17 +1027,280 @@
 
 // ЗАДАЧА 40
 
+// const atTheOldToad = {
+//     potions: ['Speed potion', 'Dragon breath', 'Stone skin'],
+//     updatePotionName(oldName, newName) {
+//         this.potions.splice(this.potions.indexOf(oldName), 1, newName)
+//     },
+// };
+
+// atTheOldToad.updatePotionName("Dragon breath", "Polymorth")
+
+// console.log(atTheOldToad.potions);
+
+// atTheOldToad.updatePotionName("Stone skin", "Invisibility")
+
+// console.log(atTheOldToad.potions);
+
+
+
+// ЗАДАЧА 41
+
 const atTheOldToad = {
-    potions: ['Speed potion', 'Dragon breath', 'Stone skin'],
-    updatePotionName(oldName, newName) {
-        this.potions.splice(this.potions.indexOf(oldName), 1, newName)
+    potions: [
+        { name: "Speed potion", price: 460 },
+        { name: "Dragon breath", price: 780 },
+        { name: "Stone skin", price: 520 },
+    ],
+
+    getPotions() {
+        // console.log(this);
+        return this.potions;
     },
+
+    addPotion(newPotion) {
+        
+        for (const object of this.potions) {
+            // console.log(object)
+
+            if (object.name === newPotion.name) {
+                return `Error! Potion ${newPotion.name} is already in your inventory!`;
+            }
+        }
+
+        this.potions.push(newPotion);
+    },
+
+    removePotion(potionName) {
+
+        for (let i = 0; i < this.potions.length; i += 1) {
+
+            // console.log(this.potions[i])
+            
+            if (potionName === this.potions[i].name) {
+
+                // console.log(potionName === this.potions[i].name)
+                // console.log(potionName)
+                // console.log(i)
+                
+                return this.potions.splice(i, 1);
+                
+            }
+      
+        }
+
+        return `Potion ${potionName} is not in inventory!`;
+
+    },
+
+
+    updatePotionName(oldName, newName) {
+
+        for (let i = 0; i < this.potions.length; i += 1) {
+
+            // let newPotion = this.potions[i].name
+
+            // console.log(this.potions)
+
+            if (oldName === this.potions[i].name) {
+                
+                // console.log(oldName === newPotion)
+                // console.log(newPotion)
+
+                this.potions[i].name = newName
+                // return this.potions.splice(i, 1, newName);
+                
+                // return
+              
+            }
+
+            // return `Potion ${oldName} is not in inventory!`;
+            
+        }
+        
+    }, 
+
 };
 
-atTheOldToad.updatePotionName("Dragon breath", "Polymorth")
+
+
+// atTheOldToad.getPotions()
+
+// console.log(atTheOldToad.potions);
+
+// atTheOldToad.addPotion({ name: "Invisibility", price: 620 })
+
+// console.log(atTheOldToad.addPotion({ name: "Invisibility", price: 620 }))
+
+// console.log(atTheOldToad.potions);
+
+// atTheOldToad.addPotion({ name: "Stone skin", price: 240 })
+
+// console.log(atTheOldToad.addPotion({ name: "Stone skin", price: 240 }))
+
+// atTheOldToad.addPotion({ name: "Power potion", price: 270 })
+
+// console.log(atTheOldToad.potions);
+
+// atTheOldToad.removePotion("Dragon breath");
+
+// console.log(atTheOldToad.potions);
+
+// atTheOldToad.removePotion("Speed potion");
+
+// console.log(atTheOldToad.potions);
+
+// atTheOldToad.updatePotionName("Dragon breath", "Polymorth")
+
+// console.log(atTheOldToad.potions);
+
+atTheOldToad.updatePotionName("Stone skin", "Invulnerability potion")
 
 console.log(atTheOldToad.potions);
 
-atTheOldToad.updatePotionName("Stone skin", "Invisibility")
 
-console.log(atTheOldToad.potions);
+
+
+
+// const kaki = { fdv: 'lock', lox: 'cyka' };
+
+// const kib = { fdv: 'lock', lox: 'cyka' };
+
+// const bot = kaki
+
+// console.log(kaki === bot)
+
+
+// const array = ['a', 'v', 'c'];
+
+// console.log(array.includes('a'))
+
+// const array = [
+//     {
+//         x: 5,
+//         y: 3
+//     },
+
+//     {
+//         x: 'a',
+//         y: 'b'
+//     },
+
+// ]
+
+// for (const object of array) {
+//     console.log(object.x === 'a')
+    
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+ * Работем с коллекцией товаров в корзине:
+ * - getItems()
+ * - add(product)
+ * - remove(productName)
+ * - clear()
+ * - countTotalPrice()
+ * - increaseQuantity(productName)
+ * - decreaseQuantity(productName)
+ *
+ * { name: '🍎', price: 50 }
+ * { name: '🍇', price: 70 }
+ * { name: '🍋', price: 60 }
+ * { name: '🍓', price: 110 }
+ */
+
+
+// const cart = {
+//     items: [],
+//     getItems() {
+//         return this.items;
+//     },
+
+    // add(product) {
+    //     for (const item of this.items) {
+    //         if (item.name === product.name) {
+    //             item.quantity += 1;
+    //             return;
+    //         }
+    //     }
+
+    //     const newProduct = {
+    //         ...product,
+    //         quantity: 1,
+    //     };
+
+    //     this.items.push(newProduct);
+    // },
+
+    // remove(productName) {
+    //     const { items } = this;
+
+    //     for (let i = 0; i < items.length; i += 1) {
+    //         const item = items[i];
+
+    //         if (productName === item.name) {
+    //             console.log('нашли такой продукт ', productName);
+    //             console.log('индекс: ', i);
+
+    //             items.splice(i, 1);
+    //         }
+    //     }
+    // },
+
+    // clear() {
+    //     this.items = [];
+    // },
+
+    // countTotalPrice() {
+    //     const { items } = this;
+    //     let total = 0;
+
+    //     for (const { price, quantity } of items) {
+    //         total += price * quantity;
+    //     }
+
+    //     return total;
+    // },
+    // increaseQuantity(productName) { },
+    // decreaseQuantity(productName) { },
+// };
+
+// console.log(cart.getItems());
+
+// cart.add({ name: '🍎', price: 50 });
+// cart.add({ name: '🍇', price: 60 });
+// cart.add({ name: '🍋', price: 60 });
+// cart.add({ name: '🍋', price: 60 });
+// cart.add({ name: '🍓', price: 110 });
+// cart.add({ name: '🍓', price: 110 });
+// cart.add({ name: '🍓', price: 110 });
+
+// console.table(cart.getItems());
+
+// console.log('Total: ', cart.countTotalPrice());
+
+// cart.remove('🍇');
+// console.table(cart.getItems());
+
+// cart.clear();
+// console.log(cart.getItems());
+
+// console.log('Total: ', cart.countTotalPrice());
+
+// cart.increaseQuantity('🍎');
+// console.table(cart.getItems());
+
+// cart.decreaseQuantity('🍋');
+// cart.decreaseQuantity('🍋');
+// console.table(cart.getItems());
