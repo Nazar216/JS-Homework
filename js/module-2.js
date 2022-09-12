@@ -170,7 +170,7 @@
 //         return "Your order is too large, not enough goods in stock!";
 //     }
 //     return "The order is accepted, our manager will contact you";
-    
+
 // }
 
 // console.log(checkStorage(70, 0))
@@ -400,7 +400,7 @@
 //     for (let i = 0; i < order.length; i += 1){
 //         total += order[i];
 //     }
-    
+
 //     return total;
 // }
 
@@ -420,12 +420,12 @@
 
 //         let words = arrayFromString[i];
 //         console.log(words);
-        
-        
+
+
 //         // console.log(smallestString)
 //         if (arrayFromString[i].length > longestString.length) {
 //             longestString = arrayFromString[i];
-            
+
 //         }
 //         console.log(longestString)
 //         // console.log(arrayFromString)
@@ -465,11 +465,11 @@
 //     const numbers = [];
 //     // console.log(numbers)
 //     // numbers.push(min, max)
-    
+
 //     for (let i = min; i <= max; i += 1){
 //         numbers.push(i)
 //     }
-   
+
 //     // console.log(numbers)
 //     return numbers;
 // }
@@ -482,7 +482,7 @@
 
 // function filterArray(numbers, value) {
 //     const newArray = [];
-    
+
 //     for (const number of numbers) {
 
 //         console.log(number)
@@ -543,7 +543,7 @@
 //     }
 
 //     return newArray
-    
+
 // }
 
 // console.log(getCommonElements([1, 2, 3], [2, 1, 17, 19]));
@@ -553,13 +553,13 @@
 
 // function calculateTotalPrice(order) {
 //     let total = 0;
-    
+
 
 //     for (let i = 0; i < order.length; i += 1) {
 //         total += order[i];
 //     }
 
-   
+
 //     return total;
 // }
 
@@ -625,7 +625,7 @@
 //         number = i;
 //         console.log(i);
 //         break
-        
+
 //     }
 // }
 
@@ -634,7 +634,7 @@
 // ЗАДАЧА 31
 
 // function findNumber(start, end, divisor) {
-    
+
 //     // let number;
 
 //     for (let i = start; i < end; i += 1) {
@@ -645,7 +645,7 @@
 //     }
 
 //     // return number;
-    
+
 // }
 
 // console.log(findNumber(2, 6, 5));
@@ -655,7 +655,7 @@
 // ЗАДАЧА 32
 
 // function includes(array, value) {
-    
+
 //     // const newArray = []
 
 //     for (let i = 0; i < array.length; i += 1){
@@ -664,7 +664,7 @@
 
 //         if (value === array[i]) {
 //             return true
-//         } 
+//         }
 //     }
 
 //     return false
@@ -675,7 +675,7 @@
 
 
 // function includes(array, value) {
-    
+
 //     // const newArray = []
 
 //     for (numbers of array){
@@ -684,39 +684,22 @@
 
 //         if (value === numbers) {
 //             return true
-//         } 
+//         }
 //     }
 
 //     return false
 
 // }
 
-// console.log(includes([1, 2, 3, 4, 5], 5))
+// console.log(includes([1, 2, 3, 4, 5], 6))
 
 
+// function multiply(a, b) {
+//    return a * b
+    
+// }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// console.log(multiply(1, 2));
 
 
 

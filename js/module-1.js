@@ -471,7 +471,7 @@
 // }
 
 
-// console.log(checkPassword(null));
+// console.log(checkPassword('a'));
 
 
 
@@ -571,4 +571,6 @@
 //     let result = message.toLowerCase().includes('spam') || message.toLowerCase().includes('sale');
 //     return result;
 // }
-// console.log(checkForSpam("Latest technology news"));
+// console.log(checkForSpam("Latest technology spa"));
+
+
