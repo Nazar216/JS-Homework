@@ -275,7 +275,7 @@
 //     tags
 // };
 
-// console.log(price);
+// console.log(product.price);
 
 
 // ЗАДАЧА 9
@@ -363,6 +363,8 @@
 // console.log(values)
 
 
+
+
 // ЗАДАЧА 12
 
 // function countProps(object) {
@@ -372,6 +374,9 @@
 // }
 
 // console.log(countProps({ name: "Mango", age: 2 }))
+
+
+
 
 
 // ЗАДАЧА 13
@@ -451,6 +456,8 @@
 // console.log(values);
 
 
+
+
 // ЗАДАЧА 16
 
 // function countTotalSalary(salaries) {
@@ -465,6 +472,7 @@
 // }
 
 // console.log(countTotalSalary({ mango: 100, poly: 150, alfred: 80 }));
+
 
 
 // ЗАДАЧА 17
@@ -488,6 +496,7 @@
 
 // console.log(hexColors);
 // console.log(rgbColors);
+
 
 
 // ЗАДАЧА 18
@@ -515,6 +524,8 @@
 // }
 
 // console.log(getProductPrice('Radar'));
+
+
 
 
 // ЗАДАЧА 19 ????
@@ -610,6 +621,7 @@
 // console.log(calculateTotalPrice("Radar"))
 
 
+
 // ЗАДАЧА 21
 
 // const highTemperatures = {
@@ -668,6 +680,7 @@
 
 
 
+
 // ЗАДАЧА 24
 
 // const colors = [
@@ -690,6 +703,27 @@
 
 // console.log(hexColors);
 
+
+const forecast = {
+    today: {
+        low: 28,
+        high: 32,
+        icon: 'https://www.flaticon.com/svg/static/icons/svg/861/861059.svg',
+    },
+    tomorrow: {
+        low: 27,
+        high: 31,
+    },
+};
+// Change code below this line
+
+// const highToday = forecast.today.high;
+// const lowToday = forecast.today.low;
+// const todayIcon = forecast.today.icon;
+
+// const highTomorrow = forecast.tomorrow.high;
+// const lowTomorrow = forecast.tomorrow.low;
+// const tomorrowIcon = forecast.tomorrow.icon;
 
 
 
@@ -721,6 +755,7 @@
 // } = forecast
 
 // console.log(lowToday);
+
 
 
 // ЗАДАЧА 26
@@ -898,6 +933,7 @@
 // console.log(findMatches([1, 2, 3, 4, 5], 1, 8, 2, 7))
 
 
+
 // ЗАДАЧА 34
 
 
@@ -926,6 +962,8 @@
 // console.log(bookShelf.updateBook("Sands of dune", "Dune"));
 
 
+
+
 // ЗАДАЧА 35
 
 // const bookShelf = {
@@ -946,6 +984,23 @@
 // console.log(bookShelf.updateBook("Haze", "Dungeon chronicles"))
 
 // console.log(bookShelf.books)
+
+
+// const bookShelf = {
+//     books: ['The last kingdom', 'Haze', 'The guardian of dreams'],
+//     updateBook(oldName, newName) {
+//         // for (const book of this.books) {
+//         // console.log(book)
+//         // if (this.books.indexOf(oldName)) {
+//         this.books.splice(this.books.indexOf(oldName), 1, newName)
+//         // }
+//         // }
+//         return this.books
+//     },
+// };
+
+// console.log(bookShelf.updateBook("Haze", "Dungeon chronicles"))
+
 
 
 // ЗАДАЧА 36
@@ -1046,81 +1101,81 @@
 
 // ЗАДАЧА 41
 
-const atTheOldToad = {
-    potions: [
-        { name: "Speed potion", price: 460 },
-        { name: "Dragon breath", price: 780 },
-        { name: "Stone skin", price: 520 },
-    ],
+// const atTheOldToad = {
+//     potions: [
+//         { name: "Speed potion", price: 460 },
+//         { name: "Dragon breath", price: 780 },
+//         { name: "Stone skin", price: 520 },
+//     ],
 
-    getPotions() {
-        // console.log(this);
-        return this.potions;
-    },
+//     getPotions() {
+//         // console.log(this);
+//         return this.potions;
+//     },
 
-    addPotion(newPotion) {
+//     addPotion(newPotion) {
         
-        for (const object of this.potions) {
-            // console.log(object)
+//         for (const object of this.potions) {
+//             // console.log(object)
 
-            if (object.name === newPotion.name) {
-                return `Error! Potion ${newPotion.name} is already in your inventory!`;
-            }
-        }
+//             if (object.name === newPotion.name) {
+//                 return `Error! Potion ${newPotion.name} is already in your inventory!`;
+//             }
+//         }
 
-        this.potions.push(newPotion);
-    },
+//         this.potions.push(newPotion);
+//     },
 
-    removePotion(potionName) {
+//     removePotion(potionName) {
 
-        for (let i = 0; i < this.potions.length; i += 1) {
+//         for (let i = 0; i < this.potions.length; i += 1) {
 
-            // console.log(this.potions[i])
+//             // console.log(this.potions[i])
             
-            if (potionName === this.potions[i].name) {
+//             if (potionName === this.potions[i].name) {
 
-                // console.log(potionName === this.potions[i].name)
-                // console.log(potionName)
-                // console.log(i)
+//                 // console.log(potionName === this.potions[i].name)
+//                 // console.log(potionName)
+//                 // console.log(i)
                 
-                return this.potions.splice(i, 1);
+//                 return this.potions.splice(i, 1);
                 
-            }
+//             }
       
-        }
+//         }
 
-        return `Potion ${potionName} is not in inventory!`;
+//         return `Potion ${potionName} is not in inventory!`;
 
-    },
+//     },
 
 
-    updatePotionName(oldName, newName) {
+//     updatePotionName(oldName, newName) {
 
-        for (let i = 0; i < this.potions.length; i += 1) {
+//         for (let i = 0; i < this.potions.length; i += 1) {
 
-            // let newPotion = this.potions[i].name
+//             // let newPotion = this.potions[i].name
 
-            // console.log(this.potions)
+//             // console.log(this.potions)
 
-            if (oldName === this.potions[i].name) {
+//             if (oldName === this.potions[i].name) {
                 
-                // console.log(oldName === newPotion)
-                // console.log(newPotion)
+//                 // console.log(oldName === newPotion)
+//                 // console.log(newPotion)
 
-                this.potions[i].name = newName
-                // return this.potions.splice(i, 1, newName);
+//                 this.potions[i].name = newName
+//                 // return this.potions.splice(i, 1, newName);
                 
-                // return
+//                 // return
               
-            }
+//             }
 
-            // return `Potion ${oldName} is not in inventory!`;
+//             // return `Potion ${oldName} is not in inventory!`;
             
-        }
+//         }
         
-    }, 
+//     }, 
 
-};
+// };
 
 
 
@@ -1154,9 +1209,9 @@ const atTheOldToad = {
 
 // console.log(atTheOldToad.potions);
 
-atTheOldToad.updatePotionName("Stone skin", "Invulnerability potion")
+// atTheOldToad.updatePotionName("Stone skin", "Invulnerability potion")
 
-console.log(atTheOldToad.potions);
+// console.log(atTheOldToad.potions);
 
 
 
